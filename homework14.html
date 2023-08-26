@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1.დაწერე ფუნქცია calculateArea რომელიც მიიღებს პარამეტრად ოთხკუთხედის სიგრძეს და სიგანეს და დააბრუნებს მის პარამეტრს
+    function calculateArea(length, width) {
+        return 2 * (length + width);
+    }
+
+    let length = 5;
+    let width = 3;
+    let perimeter = calculateArea(length, width);
+    console.log(perimeter);
+
+
+    //2.დაწერე ფუნქცია getEvenNumbers რომელიც მიიღებს პარამეტრად რიცხვების მასივს და დააბრუნებს ახალ მასივს რომელიც შედგება მხოლოდ ლუწი რიცხვებისგან
+    const arr = [20, 19, 230, 431, 4568, 88, 56, 4, 6, 7, 1001, 34, 7654, 234, 3, 16];
+
+    function getEvenNumbers(arr) {
+        const newArr = [];
+        for (let i = 0; i < arr.length; i++) {
+            const num = arr[i];
+            if (num % 2 === 0) {
+                newArr.push(num);
+            }
+        }
+        return newArr;
+    }
+
+    console.log(getEvenNumbers(arr));
+
+
+    //3.დაწერე ფუნქცია getOddNumbers რომელიც მიიღებს პარამეტრად რიცხვების მასივს და დააბრუნებს ახალ მასივს რომელიც შედგება მხოლოდ კენტი რიცხვებისგან
+    const oddArr = [20, 19, 230, 431, 4568, 88, 56, 4, 6, 7, 1001, 34, 7654, 234, 3, 16];
+
+    function getOddNumbers(oddArr) {
+        const newArr = [];
+        for (let i = 0; i < oddArr.length; i++) {
+            const num = oddArr[i];
+            if (num % 2 === 1) {
+                newArr.push(num);
+            }
+        }
+        return newArr;
+    }
+
+    console.log(getOddNumbers(oddArr));
+
+    //4.დაწერეთ ფუნქცია რომელიც მიიღებს რიცხვების მასივს და დააბტუნებს მათ ჯამს
+    const numArr = [35, 54, 7, 8, 9, 34, 77, 89, 2];
+
+    function sum(numArr) {
+        let newArr = 0;
+        for (let i = 0; i < numArr.length; i++) {
+            newArr += numArr[i];
+        }
+        return newArr;
+    }
+
+    console.log(sum(numArr));
+
+
+    //5.შექმენით ფუნქცია findMax რომელიც მიიღებს რიცხების მასივს და დააბრუნებს მათ შორის მაქსიმალურს. გამოიყენეთ for loop.
+    const maxArr = [20, 19, 230, 431, 4568, 88, 56, 4, 6, 7, 1001, 34, 7654, 234, 3, 16];
+
+    function findMax(maxArr) {
+        let max = maxArr[0];
+        for (let i = 0; i < maxArr.length; i++) {
+            if (maxArr[i] > max) {
+                max = maxArr[i];
+            }
+        }
+        return max;
+    }
+
+    console.log(findMax(maxArr))
+
+
+    //6.
+    const people = [
+        {firstName: "John", lastName: "Doe", age: 30},
+        {firstName: "Jane", lastName: "Smith", age: 25},
+        {firstName: "Michael", lastName: "Johnson", age: 40},
+        {firstName: "Emily", lastName: "Williams", age: 22}
+    ];
+    //შექმენით ფუნქცია logPerson() რომელიც  ამ მასივს გადაუვლის და დალოგავს მონაცემებს შემდეგი სახით.
+    //Hello I am {{firstName}} {{lastName}} and I’m {{age}} years old
+
+    function logPerson(people) {
+        for (let i = 0; i < people.length; i++) {
+            let person = people[i];
+            console.log(`Hello, I am ${person.firstName} ${person.lastName} and I'm ${person.age} years old.`);
+        }
+    }
+
+    logPerson(people);
+</script>
+</body>
+</html>
